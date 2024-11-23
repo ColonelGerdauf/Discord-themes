@@ -8,7 +8,7 @@
 @import url('https://raw.githubusercontent.com/ColonelGerdauf/Discord-themes/refs/heads/main/src/SLR.css');
 
 :root {
-    SLR-spacing: 15px;
+    --SLR-spacing: 15px;
     /* Font size is exclusive to Vencord ServerListIndicators  */
-    SLR-font: 11px;
+    --SLR-font: 11px;
 }
