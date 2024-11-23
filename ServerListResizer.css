@@ -1,0 +1,14 @@
+/**
+ * @name ServerListResizer
+ * @author Colonel_Gerdauf
+ * @description Changes the server section spacing to be more consistent and readable
+ * @version 0.1.2
+ * @source https://github.com/ColonelGerdauf/Discord-themes/
+ */
+@import url('https://raw.githubusercontent.com/ColonelGerdauf/Discord-themes/refs/heads/main/src/SLR.css');
+
+:root {
+    SLR-spacing: 15px;
+    /* Font size is exclusive to Vencord ServerListIndicators  */
+    SLR-font: 11px;
+}
