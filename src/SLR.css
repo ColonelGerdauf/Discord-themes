@@ -1,7 +1,7 @@
 /* ServerListResizer; improves Vencord ServerListIndicators, with the assumption that a single-column config is set */
 :root {
     SLR-font: 11px;
-    SLR-spacing: 0.15px;
+    SLR-spacing: 15px;
 }
 
 /* change Vencord server count dimensions */
@@ -18,7 +18,7 @@ div:has(>#vc-guildcount) {
 div[aria-label="Servers"] [class*="wrapper_"],
 div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"],
 div[aria-label="Servers"] [class*="listItem_"] { /* NOTE: user changable */
-    margin-bottom: var(--SLR-spacing) !important;
+    margin-bottom: calc(var(--SLR-spacing)/100) !important;
 }
 div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"] {
     margin-top: 0 !important;
