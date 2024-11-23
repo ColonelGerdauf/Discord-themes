@@ -1,7 +1,7 @@
 /* ServerListResizer; improves Vencord ServerListIndicators, with the assumption that a single-column config is set */
 :root {
-    SLR-font: 11px;
-    SLR-spacing: 15px;
+    --SLR-font: 11px;
+    --SLR-spacing: 15px;
 }
 
 /* change Vencord server count dimensions */
