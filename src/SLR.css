@@ -1,0 +1,38 @@
+/* ServerListResizer; improves Vencord ServerListIndicators, with the assumption that a single-column config is set */
+
+/* change Vencord server count dimensions */
+#vc-guildcount { /* NOTE: user changable */
+    font-size: 11px !important;
+}
+div:has(>#vc-guildcount) {
+    margin-left: calc(-10px * var(--guildsize_v)/50) !important;
+    width: calc(1px * (var(--guildsize_v) * var(--columns_v) + 20 * (var(--guildsize_v)/50) + 14 * (var(--guildsize_v)/50) * (var(--columns_v) - 1)))  !important;
+}
+
+/* server spacing */ 
+div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"],
+div[aria-label="Servers"] [class*="listItem_"],
+div[aria-label="Servers"] [class*="wrapper_"] { /* NOTE: user changable */
+    margin-bottom: 0.15px !important;
+}
+div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"] {
+    margin-top: 0 !important;
+    margin-left: calc(1px * (((var(--guildsize_v) + 12 * var(--guildsize_v)/50) * (var(--columns_v) - 1))/2)) !important;
+    margin-right: calc(1px * (((var(--guildsize_v) + 12 * var(--guildsize_v)/50) * (var(--columns_v) - 1))/2)) !important;
+}
+div[aria-label="Servers"] [class*="listItem_"],
+[class*="wrapper_"] [class*="wrapper_"] [role="group"] [class*="listItem_"] {
+    margin-top: calc(1px* var(--guildgap_v)) !important; 
+    margin-left: 0 !important;
+}
+div[aria-label="Servers"] [class*="listItem_"] {
+    margin-right: calc(1px*(12* var(--guildsize_v) / 50)) !important;
+}
+div[aria-label="Servers"]>[class*="wrapper_"] {
+    margin-top: calc(1px * var(--guildgap_v)) !important;
+    margin-right: calc(1px * (12 * var(--guildsize_v)/50)) !important;
+    margin-left: 0 !important;
+}
+div[aria-label="Servers"] [class*="wrapper_"] [class*="wrapper_"] [role="group"] [class*="listItem_"] {
+    margin-right: 0 !important;
+}
