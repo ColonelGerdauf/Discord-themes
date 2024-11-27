@@ -33,6 +33,9 @@ div[aria-label="Servers"] [class*="listItem_"],
 div[aria-label="Servers"] [class*="listItem_"] {
     margin-right: calc(1px*(12* var(--guildsize_v) / 50)) !important;
 }
+div[aria-label="Servers"] [class*="listItem_"]>div:has(svg) {
+    height: var(--custom-message-avatar-size) !important;
+}
 div[aria-label="Servers"]>[class*="wrapper_"] {
     margin-top: calc(1px * var(--guildgap_v)) !important;
     margin-right: calc(1px * (12 * var(--guildsize_v)/50)) !important;
