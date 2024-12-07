@@ -2,6 +2,7 @@
 :root {
     --SLR-font: 11px;
     --SLR-spacing: 15px;
+    --slr-folder: 0;
 }
 
 /* change Vencord server count dimensions */
@@ -13,7 +14,10 @@ div:has(>#vc-guildcount) {
     width: calc(1px * (var(--guildsize_v,48) * var(--columns_v,1) + 20 * (var(--guildsize_v,48)/50) + 14 * (var(--guildsize_v,48)/50) * (var(--columns_v,1) - 1)))  !important;
 }
 
-/* server spacing */ 
+/* server spacing */
+div[aria-label="Servers"]>[class*="wrapper_"] { /* NOTE: user changable */
+    border-bottom: var(--SLR-folder) !important;
+}
 div[aria-label="Servers"] [class*="wrapper_"],
 div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"],
 div[aria-label="Servers"] [class*="listItem_"] { /* NOTE: user changable */
