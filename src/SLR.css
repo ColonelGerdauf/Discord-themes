@@ -9,12 +9,11 @@
     font-size: var(--SLR-font) !important;
 }
 div:has(>#vc-guildcount) {
-    margin-left: calc(-10px * var(--guildsize_v)/50) !important;
-    width: calc(1px * (var(--guildsize_v) * var(--columns_v) + 20 * (var(--guildsize_v)/50) + 14 * (var(--guildsize_v)/50) * (var(--columns_v) - 1)))  !important;
+    margin-left: calc(-10px * var(--guildsize_v,0)/50) !important;
+    width: calc(1px * (var(--guildsize_v,48) * var(--columns_v,1) + 20 * (var(--guildsize_v,48)/50) + 14 * (var(--guildsize_v,48)/50) * (var(--columns_v,1) - 1)))  !important;
 }
 
 /* server spacing */ 
-
 div[aria-label="Servers"] [class*="wrapper_"],
 div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"],
 div[aria-label="Servers"] [class*="listItem_"] { /* NOTE: user changable */
@@ -22,25 +21,29 @@ div[aria-label="Servers"] [class*="listItem_"] { /* NOTE: user changable */
 }
 div[aria-label="Servers"] [class*="wrapper_"] [class*="listItem_"]:first-child [class*="listItemWrapper_"] {
     margin-top: 0 !important;
-    margin-left: calc(1px * (((var(--guildsize_v) + 12 * var(--guildsize_v)/50) * (var(--columns_v) - 1))/2)) !important;
-    margin-right: calc(1px * (((var(--guildsize_v) + 12 * var(--guildsize_v)/50) * (var(--columns_v) - 1))/2)) !important;
+    margin-left: calc(1px * (((var(--guildsize_v,48) + 12 * var(--guildsize_v,48)/50) * (var(--columns_v,1) - 1))/2)) !important;
+    margin-right: calc(1px * (((var(--guildsize_v,48) + 12 * var(--guildsize_v,48)/50) * (var(--columns_v,1) - 1))/2)) !important;
 }
 div[aria-label="Servers"] [class*="listItem_"],
 [class*="wrapper_"] [class*="wrapper_"] [role="group"] [class*="listItem_"] {
-    margin-top: calc(1px* var(--guildgap_v)) !important; 
+    margin-top: calc(1px*var(--guildgap_v,48)) !important; 
     margin-left: 0 !important;
 }
 div[aria-label="Servers"] [class*="listItem_"] {
-    margin-right: calc(1px*(12* var(--guildsize_v) / 50)) !important;
+    margin-right: calc(1px*(12* var(--guildsize_v,48) / 50)) !important;
 }
 div[aria-label="Servers"] [class*="listItem_"]>div:has(svg) {
-    height: var(--custom-message-avatar-size) !important;
+    height: var(--custom-message-avatar-size,48px) !important;
 }
 div[aria-label="Servers"]>[class*="wrapper_"] {
-    margin-top: calc(1px * var(--guildgap_v)) !important;
-    margin-right: calc(1px * (12 * var(--guildsize_v)/50)) !important;
+    margin-top: calc(1px * var(--guildgap_v,48)) !important;
+    margin-right: calc(1px * (12 * var(--guildsize_v,48)/50)) !important;
     margin-left: 0 !important;
 }
 div[aria-label="Servers"] [class*="wrapper_"] [class*="wrapper_"] [role="group"] [class*="listItem_"] {
-    margin-right: 0 !important;
+    margin-right: 0 !important; 
+}
+/* correction to deal with erratic opened folder size with ServerColumns */
+div[aria-label="Servers"]>[class*="wrapper_"]>ui {
+    height: calc(100% + (var(--guildsize,48px)/2)) !important;
 }
