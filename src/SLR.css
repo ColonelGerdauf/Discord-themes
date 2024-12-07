@@ -44,6 +44,6 @@ div[aria-label="Servers"] [class*="wrapper_"] [class*="wrapper_"] [role="group"]
     margin-right: 0 !important; 
 }
 /* correction to deal with erratic opened folder size with ServerColumns */
-div[aria-label="Servers"]>[class*="wrapper_"]>ui {
+div[aria-label="Servers"]>[class*="wrapper_"]>ul {
     height: calc(100% + (var(--guildsize,48px)/2)) !important;
 }
